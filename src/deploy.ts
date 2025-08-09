@@ -176,7 +176,7 @@ export async function deploy(args: IFtpDeployArgumentsWithDefaults, logger: ILog
 
         diffs.same.map((itemSame) => {
             if (itemSame.type === "file") {
-                logger.standard(`⚖️  File content is the same, doing nothing: ${itemSame.name}`);
+                logger.verbose(`⚖️  File content is the same, doing nothing: ${itemSame.name}`);
             }
         });
         timings.stop("logging");
